@@ -1,0 +1,335 @@
+Classes
+    Guerreiro
+        + hp
+        + def
+    Mago
+        + atk
+        + destreza
+    Ladino
+        + vel
+        + destreza
+    Necromante
+        + atk
+        + vel
+    Ranger
+        + vel
+        + sorte
+    Bardo
+        + destreza
+        + sorte
+_______________________________
+Armas Guerreiro
+    Espada + Escudo
+        + atk
+        ++ def
+    Machado + Escudo
+        + atk
+        ++ def
+    Lança + Escudo
+        + atk
+        ++ def
+	Espadas Duplas
+        ++ atk
+        + vel
+    Espada Longa
+        +++ atk
+    Machado de arremesso
+        ++ atk
+        + vel
+    Machado de Batalha
+        +++ atk
+_________________________________
+Armas Mago
+    Cajado Elemental (Madeira + Gema Elemental)
+        Fogo
+            Queimadura
+        Gelo
+            Congelamento
+        Raio
+            Corrente de raios
+    Cajado Astral (Metal + Pedra da Lua)
+        Telecinese + Magia de Luz
+    Varinha Mágica
+        Magias ágeis
+    Adagas
+        + vel
+_________________________________
+Armas Ladino
+    Adagas Duplas
+        + atk
+        ++ vel
+    Besta de Mão
+        ++ atk
+        + vel
+    Espada Curta
+        ++ atk
+        + vel
+    Bombas de Fumaça
+_________________________________
+Armas Necromante
+    Cajado Obscuro (Ossos + Obsidiana)
+        Invoca mortos vivos
+        Suga a vida
+    Punhal
+        + atk
+        corta cura
+_________________________________
+Armas Ranger
+    Arco Longo
+        ++ atk
+    Besta Pesada
+        ++ atk
+    Facas de arremesso
+        + atk
+        + vel
+_________________________________
+Armas Bardo
+    Alaúde
+        ++ sorte
+        ++ destreza 
+    Flauta
+        ++ sorte
+        ++ destreza 
+    Rapieira
+        + atk
+        + vel
+_________________________________
+=================================
+Guerreiro -> Ladino -> Ranger
+Mago -> Necromante
+Bardo
+=================================
+
+
+Roupas
+    Armaduras Pesada (Placas)
+        +++ def
+        - vel
+    Armaduras Leves (Couro)
+        + def
+        + vel
+    Tunicas Magicas (Tecido)
+        + def (magia)
+        + vel
+
+Itens
+    Poção de Cura
+        + hp
+    Poção de Mana
+        + Mana
+    Tônico
+        + atk
+    Amuleto de Proteção (magia)
+        + def
+
+
+Turnos
+    Contagem de Turnos
+
+Fases
+    Niveis que aumentam a dificuldade, como nível de inimigo e quantidade de inimigos
+	
+Inimigos diferentes
+    Variedades de inimigos com ataques próprios
+    Chefões a cada 10 níveis
+
+Experiência
+    Xp coletado ao ganhar a batalha
+    Subir de nível
+    Atributos melhorados com o nível
+    5 tipos de habilidades, começando com 2 e desbloqueando a cada 10 níveis
+
+Inventario
+    Uso dos itens, com opção de voltar
+    Troca de arma
+
+Troca de Classes
+    Ao atingir nível 40 desbloquear as novas Classes
+    Guerreiro -> Ladino ou Guerreiro -> Ranger
+    Mago -> Necromante
+
+
+Inimigos
+
+    Esqueleto Guerreiro
+        Espada e Escudo
+    Esqueleto Mago
+        Varinha e Grimório
+    Esqueleto Necromante
+        Obsidiana
+    Esqueleto Gigante **
+        Espada
+
+
+    Lobo Cinzento
+
+    Bicho Pau
+
+    Aranha Gigante
+
+    Morcegos 
+
+    Gárgulas
+
+    Manticora Voadora **
+
+
+    Golens **
+        Fogo
+        Terra
+        Gelo
+
+    Goblin Saqueador
+        Espada Curta
+    Goblin Comum
+        Machado
+        Lança
+    Goblin Detonador
+        Bombas
+    Goblin Mago **
+        Cajado Elemental
+            Fogo
+            Gelo
+            Raio
+    
+    Orc **
+        Espada Longa
+        Machado de Batalha
+
+    Wyven **
+
+
+Sistema de combate baseado em dados
+	Dano base = pontos de força distribuidos + pontos de classe
+	Ataque = Dano base + dano da arma + dano de habilidade
+	
+	Rola D20
+	1 - Errou o golpe
+	2-19 - Fração de Ataque
+	20 - Dano Crítico = Ataque * D4
+	
+Habilidades
+	Guerreiro
+		Espada + Escudo
+			[1] Estocada
+				Perfurar o oponente com a ponta da espada, visando brechas na armadura, garganta ou tronco.
+				
+			[2] Guarda Cruzada
+				Postura defensiva onde o escudo protege o tronco e a cabeça , enquanto a espada fica posicionada atrás ou à frente pronta para picar.
+				
+			[3] Corte Transversal
+				 Ataque horizontal direcionado às laterais, costelas ou braços do adversário.
+				 
+			[4] Golpe Duplo
+				 Ataque duas vezes seguidas sem tempo para o adversário defender.
+				 
+			[5] Shield-Punch
+				Golpear simultaneamente com o escudo para abrir a guarda e avançar com a estocada da espada no mesmo tempo de ação.
+				
+		Machado + Escudo
+			[1] Corte Descendente
+				O golpe clássico de cima para baixo, usando a gravidade e o peso da arma para atravessar capacetes, ombreiras ou escudos leves.
+				
+			[2] Guarda Fechada
+				Postura defensiva onde o escudo protege o tronco e a cabeça.
+				
+			[3] Varredura
+				Um movimento horizontal amplo feito para atingir múltiplos inimigos ou forçar o oponente a abaixar a guarda.
+				
+			[4] Investida do Muralha
+				O guerreiro avança com o escudo à frente e desfia um corte descendente com o machado logo após o impacto do escudo.
+				
+			[5] Aparar e Retaliar
+				Usar a superfície do escudo para  "prender" a arma do inimigo, desferindo imediatamente um corte lateral com o machado na mão oposta.
+				
+		Lança + Escudo
+			[1] Estocada por Cima
+				Empunhar a lança acima do ombro, golpeando de cima para baixo.
+				
+			[2] Guarda Fechada
+				Postura defensiva onde o escudo protege o tronco e a cabeça.
+				
+			[3] Estocada Oculta
+				Desferir o golpe mantendo o corpo e o rosto totalmente protegidos atrás do escudo, projetando apenas a ponta da lança pelo lado.
+				
+			[4] Contragolpe
+				Usar a face ou o bordo do escudo para golpear o rosto ou o peito do adversário, abrindo espaço para a estocada da lança.
+
+			[5] Estocada em Pistão
+				Ataques rápidos e repetitivos em linha reta, recolhendo e lançando a arma continuamente para manter o oponente acuado.
+				
+		Espadas Duplas
+			[1] Golpe Duplo
+				Ataque simultâneo com ambas as armas.
+				
+			[2] Cruz de Ferro
+				Cruzas as duas espadas à frente do corpo para bloquear um ataque inimigo e empurrar o oponente para trás.
+				
+			[3] Lâminas Giratórias
+				Investida rápida através dos inimigos golpeando com as duas espadas em rotação.
+				
+			[4] Duplo Impacto Vertical
+				O guerreiro salta ou avança descendo ambas as espadas paralelamente de cima para baixo com o peso do corpo.
+				
+			[5] Fluxo Contínuo
+				O guerreiro salta ou avança descendo ambas as espadas paralelamente de cima para baixo com o peso do corpo.
+				
+		Espada Longa
+			[1] Corte do Trono
+				Um golpe vertical de cima para baixo com força máxima, focado em partir a linha de defesa (ou o capacete) do oponente.
+			
+			[2] Guarda do Falcão
+				Uma postura alta com a espada erguida acima da cabeça, pronta para descer em um contra-ataque fulminante assim que o inimigo hesitar.
+			
+			[3] Passo de Estocada
+				Um avanço firme com a ponta da espada longa direcionada direto para as frestas da armadura ou garganta do alvo.
+			
+			[4] Varredura de Aço
+				Corte horizontal em circulo para atingir o máximo de alvos.
+			
+			[5] Corte Oblíquo
+				Um ataque diagonal violento que desce do ombro em direção ao quadril oposto, aproveitando a gravidade e o peso da arma.
+				
+		Machado de Arremesso
+			[1] Corte Descendente
+				O golpe clássico de cima para baixo, usando a gravidade e o peso da arma para atravessar capacetes, ombreiras ou escudos leves.
+				
+			[2] Guarda Cruzada
+				Postura defensiva cruzando dois machados frente ao corpo.
+				
+			[3] 
+			
+			[4] 
+			
+			[5]
+			
+	Mago
+		[1] 
+		[2] 
+		[3] 
+		[4] 
+		[5] 
+	Bardo
+		[1] 
+		[2] 
+		[3] 
+		[4] 
+		[5] 
+	Ladino
+		[1] 
+		[2] 
+		[3] 
+		[4] 
+		[5] 
+	Ranger
+		[1] 
+		[2] 
+		[3] 
+		[4] 
+		[5] 
+	Necromante
+		[1] 
+		[2] 
+		[3] 
+		[4] 
+		[5] 
