@@ -2,6 +2,16 @@ import random
 import time
 from utils import limpar_tela
 
+def d20():
+    resultado_d20 = random.randint(1, 20)
+    print("Um D20 está sendo rolado...")
+    time.sleep(0.5)
+    print("...")
+    time.sleep(1)
+    print(f"O resultado é {resultado_d20}")
+    print()
+    time.sleep(1)
+    return resultado_d20
 
 def rolar_combate(heroi, inimigo):
   regeneracao_disponivel = True
@@ -58,11 +68,11 @@ def rolar_combate(heroi, inimigo):
 
       if acao == "1":
         # 1. LUTAR
-        dado_jogador = random.randint(1, 20)
+        dado_jogador = d20()
         poder_ataque_jogador = (
             dado_jogador + heroi["sorte"] + heroi["forca"]
         )
-        print(f"\n[SEU TURNO] Você rolou um D20 e tirou: {dado_jogador}")
+        print()
         time.sleep(1)
         print(
             f">> Total do seu Ataque ({dado_jogador} + {heroi['sorte']} Sorte +"
@@ -174,13 +184,9 @@ def rolar_combate(heroi, inimigo):
     limpar_tela()
 
     # TURNO DO INIMIGO ATACAR
-    dado_inimigo = random.randint(1, 20)
+    dado_inimigo = d20()
     poder_ataque_inimigo = (
         dado_inimigo + inimigo["sorte"] + inimigo["forca"]
-    )
-    print(
-        f"\n[{inimigo['nome']} ATACA] O inimigo rolou um D20 e tirou:"
-        f" {dado_inimigo}"
     )
     time.sleep(1)
     print(
