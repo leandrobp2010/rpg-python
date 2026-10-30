@@ -6,6 +6,7 @@ from utils import limpar_tela
 def rolar_combate(heroi, inimigo):
   regeneracao_disponivel = True
   inimigo_hp = inimigo["hp"]
+  inimigo_hp_max = inimigo_hp
 
   limpar_tela()
   print(f"\n--- UM ENCONTRO DE COMBATE (Fase {inimigo['fase']})! ---")
@@ -22,7 +23,7 @@ def rolar_combate(heroi, inimigo):
   print(f"{inimigo['nome']}")
   print("=============================")
   time.sleep(1)
-  print(f"HP:         {inimigo_hp}")
+  print(f"HP:         {inimigo_hp}/{inimigo_hp_max}")
   print(f"Força:      {inimigo['forca']}")
   print(f"Defesa:     {inimigo['defesa']}")
   print(f"Sorte:      {inimigo['sorte']}")
@@ -45,7 +46,7 @@ def rolar_combate(heroi, inimigo):
           f" {heroi['pocoes']} | Regeneração Disponível:"
           f" {'Sim' if regeneracao_disponivel else 'Não'}"
       )
-      print(f"Inimigo: {inimigo['nome']} (HP: {inimigo_hp})")
+      print(f"Inimigo: {inimigo['nome']} (HP: {inimigo_hp}/{inimigo_hp_max})")
       print("-" * 35)
       print("Escolha sua ação:")
       print("[1] Lutar")
