@@ -124,9 +124,8 @@ def criar_personagem():
 def exibir_ficha(heroi):
     ficha = f"""
 =============================
-     FICHA DE PERSONAGEM
+       {heroi['nome']}
 =============================
-Nome:       {heroi['nome']}
 Classe:     {heroi['classe']}
 HP:         {heroi['hp']}/{heroi['hp_maximo']}
 Força:      {heroi['forca']}
